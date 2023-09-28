@@ -1,0 +1,60 @@
+package multipart3;
+
+import static io.restassured.RestAssured.given;
+
+import java.io.File;
+
+import com.datadriven.test.Xls_Reader;
+
+import io.restassured.RestAssured;
+
+public class Api {
+	
+	public static Req imageReq(String img) {
+		Req r = new Req();
+		r.setImage("img");
+		return r;
+	}
+
+	public static void main(String[] args) {
+		// Create Excel sheet where data should store
+		Xls_Reader reader = new Xls_Reader("C:\\Users\\Bhanu Pratap\\PracticeLiVeliness.xlsx");
+		int rowNumber=2;
+		reader.addColumn("sheetname", "columnName");
+		reader.addColumn("SheetName", "columnName");
+		reader.addColumn("sheetName", "columnName");
+		reader.addColumn("sheetName", "columnName");
+		reader.addColumn("sheetName", "columnName");
+		
+		
+		File file = new File("");
+		File[] f1 = file.listFiles();
+		for(File f:f1) {
+			//imageReq(f.toString());
+			RestAssured.baseURI = "http://10.159.237.12";
+			RestAssured.port = 6182;
+			Response res = given()
+					.contentType("multipart/form-data")
+					.multiPart("img",imageReq(f.toString()) )
+					.post("liveness/")
+					.then()
+					.extract()
+					.response().as(Response.class);
+					//.asString();
+			//String result = res;
+			String message = res.getMessage();
+			String output=res.getOutput();
+			 String score = res.getScore();
+			
+            reader.setCellData("sheetName","columnNmae", rowNumber, f.toString());
+			reader.setCellData("sheetName", "columnName", rowNumber, message);
+			reader.setCellData("sheetName", "coloumnName", rowNumber, output);
+			reader.setCellData("sheetName", "coloumnName", rowNumber, score);
+			rowNumber++;
+			
+		}
+		
+
+	}
+
+}

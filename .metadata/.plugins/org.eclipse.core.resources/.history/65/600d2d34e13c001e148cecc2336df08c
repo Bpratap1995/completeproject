@@ -1,0 +1,20 @@
+package multipart3;
+
+
+
+public class Req<MultipartFile> {
+	private MultipartFile image;
+
+	public MultipartFile getImage() {
+		return image;
+	}
+
+	public void setImage(MultipartFile image) {
+		this.image = image;
+	}
+
+	
+
+
+
+}

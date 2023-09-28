@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;brushup.ArrayList.java&apos; to &apos;ArrayList1.java&apos;&#x0D;&#x0A;- Original project: &apos;Brush&apos;&#x0D;&#x0A;- Original element: &apos;brushup.ArrayList.java&apos;&#x0D;&#x0A;- Renamed element: &apos;brushup.ArrayList1.java&apos;" description="Rename compilation unit &apos;ArrayList.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;brushup{ArrayList.java" name="ArrayList1.java" references="false" stamp="1682225076659" version="1.0"/>
+</session>

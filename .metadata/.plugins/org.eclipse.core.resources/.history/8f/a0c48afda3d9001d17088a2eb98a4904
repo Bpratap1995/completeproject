@@ -1,0 +1,48 @@
+package biocube_Truntrance;
+
+import java.time.Duration;
+
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import truNtrance.LandingPage;
+
+public class TruNtrance {
+
+	public static void main(String[] args) throws InterruptedException  {
+	
+		WebDriverManager.chromedriver().setup();
+		
+		ChromeOptions co = new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
+	
+		
+		WebDriver driver = new ChromeDriver(co);
+		//WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//Url
+		driver.get("https://biopasstest.com:8081/login");
+		
+		
+		
+		LandingPage lp = new LandingPage(driver);
+		
+		lp.dropdown();
+		lp.Userid("Super999");
+		lp.Mpin("4","3","2","1");
+		lp.ClickLoginButton();
+		
+		
+		
+	
+		
+		
+
+	}
+
+}

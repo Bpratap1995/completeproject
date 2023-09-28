@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;Base2Base&apos; to &apos;base2Base&apos;&#x0D;&#x0A;- Original project: &apos;practice&apos;&#x0D;&#x0A;- Original element: &apos;practice/src/Base2Base&apos;&#x0D;&#x0A;- Renamed element: &apos;practice/src/base2Base&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;Base2Base&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;Base2Base" name="base2Base" qualified="false" references="true" stamp="1675322232938" textual="false" version="1.0"/>
+</session>

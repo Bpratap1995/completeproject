@@ -1,0 +1,24 @@
+package brushup;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Arrays1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] inputArray = new int[]{1, 2, 7, 6, 1, 6, 8, 7, 1};
+	List<int[]> input = Arrays.asList(inputArray);
+	       int size= inputArray.length;
+	        
+	             Set<Integer>s=new HashSet<Integer>();
+	             for(int s1:s){
+	                 System.out.println(s1);
+	             }
+	           }
+	}
+
+}

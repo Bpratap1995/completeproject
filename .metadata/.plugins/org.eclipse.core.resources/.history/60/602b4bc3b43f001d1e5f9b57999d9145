@@ -1,0 +1,109 @@
+package biocube;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import io.restassured.RestAssured;
+//import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+public class ApiCall {
+	
+	public static FaceTrainingRequest setTrainingRequest(String base64) {
+		FaceTrainingRequest trainingRequest = new FaceTrainingRequest();
+		trainingRequest.setImage(base64);
+		trainingRequest.setLiveliness(false);
+		trainingRequest.setMobile(true);
+		return trainingRequest;
+	}
+	
+	
+	
+	public static FaceRecognitionRequest setRecognitionRequest(String encod,String base64) {
+	FaceRecognitionRequest ftr=new FaceRecognitionRequest();
+	ftr.setEncoding(encod);
+	ftr.setImage(base64);
+	ftr.setLiveliness(false);
+	ftr.setMobile(true);
+	return ftr;
+	}
+	
+	
+	
+
+	public static void main(String[] args) throws IOException {
+		String folderName = "C:\\Users\\Bhanu Pratap\\Downloads\\new1\\";
+		File f = new File(folderName);
+	
+		
+		File filesList[] = f.listFiles();
+		
+		System.out.println(filesList.length);
+		int i=0;
+		
+		
+		for(i=0;i<filesList.length;i++) {
+			String fileName = filesList[i].getName();
+			System.out.println(fileName);
+		
+		
+		RestAssured.baseURI="https://biopasstest.com:8443/ai";
+		
+		FaceTrainingResponse trainingResponse = given()
+		.header("Content-Type","application/json")
+				.body(setTrainingRequest(fileName))
+				.when()
+				.post("common/face-training")
+				.then()
+				.extract()
+				.response()
+				.as(FaceTrainingResponse.class);
+	String encodings = trainingResponse.getData().getEncodings();
+
+	for( i =i+1;i<filesList.length;i++) {
+		String fileName1 = filesList[i].getName();
+		System.out.println(fileName1);
+	
+		
+	RestAssured.baseURI="https://biopasstest.com:8443/ai";
+	
+ FaceRecognitionResponse recognitionResponse = given().log().all()
+    	.header("Content-Type","application/json")
+	     .body(setRecognitionRequest( encodings,fileName1))
+	      .when()
+		.post("common/face-recognition")
+			.then()
+			.extract()
+			.response()
+			.as(FaceRecognitionResponse.class);
+  String message = recognitionResponse.getData().getMessage();
+ String output = recognitionResponse.getData().getOutput();
+ System.out.println(message);
+ System.out.println( output);
+ 
+ XSSFWorkbook workbook = new XSSFWorkbook();
+	XSSFSheet sheet = workbook.createSheet("Facetraining");
+	Row row = sheet.createRow(0);
+	Cell cell= row.createCell(0);
+	cell.setCellValue(message);
+    Cell cell1 = row.createCell(1);
+    cell1.setCellValue(output);
+	
+	File file = new File("C:\\Users\\Bhanu Pratap\\api.xlsx");
+	FileOutputStream fos = new FileOutputStream(file);
+	workbook.write(fos);
+	fos.close();
+	workbook.close();
+	}
+   }
+		
+		
+
+}
+}

@@ -1,0 +1,51 @@
+package multipart3;
+
+import static io.restassured.RestAssured.given;
+
+import java.io.File;
+
+import com.datadriven.test.Xls_Reader;
+
+import io.restassured.RestAssured;
+
+public class Api {
+	
+	public static Req imageReq(String img) {
+		Req r = new Req();
+		r.setImage("img");
+		return r;
+	}
+
+	public static void main(String[] args) {
+		// Create Excel sheet where data should store
+		Xls_Reader reader = new Xls_Reader("");
+		int rowNumber=2;
+		reader.addColumn("sheetname", "columnName");
+		reader.addColumn("SheetName", "columnName");
+		
+		File file = new File("");
+		File[] f1 = file.listFiles();
+		for(File f:f1) {
+			//imageReq(f.toString());
+			RestAssured.baseURI = "http://10.159.237.12";
+			RestAssured.port = 9988;
+			String res = given()
+					.contentType("multipart/form-data")
+					.multiPart("img",imageReq(f.toString()) )
+					.post("liveness/")
+					.then()
+					.extract()
+					.response()
+					.asString();
+			String result = res;
+
+			reader.setCellData("Sheet1", "Image", rowNumber, f.toString());
+			reader.setCellData("Sheet1", "Result", rowNumber, result);
+			rowNumber++;
+			
+		}
+		
+
+	}
+
+}

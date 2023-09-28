@@ -1,0 +1,20 @@
+package biocube;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import testcomponents.BaseTest;
+
+public class ErrorValidation extends BaseTest {
+
+	@Test
+	public void submitOrder() throws InterruptedException {
+
+		String productName = "ZARA COAT 3";
+
+		lp.login("bpratap924@gmail.com", "Biocube@123");
+		String ele = lp.getErrorMessage();
+	//	Assert.assertEquals("Incorrect email or password", ele);
+
+	}
+}

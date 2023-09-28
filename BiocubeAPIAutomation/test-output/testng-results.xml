@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-23T14:39:23 IST" name="Default suite" finished-at="2023-06-23T14:39:25 IST" duration-ms="2267">
+    <groups>
+    </groups>
+    <test started-at="2023-06-23T14:39:23 IST" name="Default test" finished-at="2023-06-23T14:39:25 IST" duration-ms="2267">
+      <class name="practice.DataProviderTestNg">
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:practice.DataProviderTestNg@72a7c7e0]" started-at="2023-06-23T14:39:23 IST" name="addBook" data-provider="BooksData" finished-at="2023-06-23T14:39:25 IST" duration-ms="1924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ojfwty]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[9363]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:practice.DataProviderTestNg@72a7c7e0]" started-at="2023-06-23T14:39:25 IST" name="addBook" data-provider="BooksData" finished-at="2023-06-23T14:39:25 IST" duration-ms="298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[cwefee]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4253]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+      </class> <!-- practice.DataProviderTestNg -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

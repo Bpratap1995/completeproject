@@ -1,0 +1,18 @@
+package multipart3;
+
+import java.io.File;
+
+public class Req {
+	private File image;
+
+	public File getImage() {
+		return image;
+	}
+
+	public void setImage(File image) {
+		this.image = image;
+	}
+
+
+
+}

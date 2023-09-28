@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-11T10:40:34 IST" name="Default suite" finished-at="2023-07-11T10:41:08 IST" duration-ms="34057">
+    <groups>
+    </groups>
+    <test started-at="2023-07-11T10:40:34 IST" name="Default test" finished-at="2023-07-11T10:41:08 IST" duration-ms="34057">
+      <class name="biocube_TruNtrance.Tru">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:40:34 IST" name="LaunchApplication" finished-at="2023-07-11T10:40:45 IST" duration-ms="10493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="LoginSuperAdmin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:40:45 IST" name="LoginSuperAdmin" data-provider="drivenTest" finished-at="2023-07-11T10:40:48 IST" duration-ms="3591" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[super999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSuperAdmin -->
+        <test-method is-config="true" signature="DriverClose()[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:40:48 IST" name="DriverClose" finished-at="2023-07-11T10:40:48 IST" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DriverClose -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:40:48 IST" name="LaunchApplication" finished-at="2023-07-11T10:40:52 IST" duration-ms="3494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="LoginSuperAdmin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:40:52 IST" name="LoginSuperAdmin" data-provider="drivenTest" finished-at="2023-07-11T10:40:52 IST" duration-ms="467" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[super999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSuperAdmin -->
+        <test-method is-config="true" signature="DriverClose()[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:40:52 IST" name="DriverClose" finished-at="2023-07-11T10:40:53 IST" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DriverClose -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:40:53 IST" name="LaunchApplication" finished-at="2023-07-11T10:40:56 IST" duration-ms="3590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="LoginSuperAdmin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:40:56 IST" name="LoginSuperAdmin" data-provider="drivenTest" finished-at="2023-07-11T10:41:08 IST" duration-ms="11582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[biocube@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[valid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSuperAdmin -->
+        <test-method is-config="true" signature="DriverClose()[pri:0, instance:biocube_TruNtrance.Tru@7d8704ef]" started-at="2023-07-11T10:41:08 IST" name="DriverClose" finished-at="2023-07-11T10:41:08 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DriverClose -->
+      </class> <!-- biocube_TruNtrance.Tru -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

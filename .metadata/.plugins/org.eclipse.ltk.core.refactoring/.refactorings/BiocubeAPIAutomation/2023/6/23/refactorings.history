@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.datadriven.test&apos; to &apos;TruNtrance/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;practice&apos;&#x0D;&#x0A;- Destination element: &apos;TruNtrance/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;practice/src/com.datadriven.test&apos;" description="Copy package" destination="=TruNtrance/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;com.datadriven.test" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1685943208020" version="1.0"/>
+</session>

@@ -1,0 +1,15 @@
+package multipart3;
+
+import com.datadriven.test.Xls_Reader;
+
+public class Api {
+
+	public static void main(String[] args) {
+		// Create Excel sheet where data should store
+		Xls_Reader reader = new Xls_Reader("");
+		reader.addColumn("sheetname", "columnName");
+		reader.addColumn("SheetName", "columnName");
+
+	}
+
+}

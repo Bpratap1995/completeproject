@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;brushup.P4&apos; to &apos;UniqueCharString&apos;&#x0D;&#x0A;- Original project: &apos;Brush&apos;&#x0D;&#x0A;- Original element: &apos;brushup.P4&apos;&#x0D;&#x0A;- Renamed element: &apos;brushup.UniqueCharString&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;P4&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;brushup{P4.java[P4" matchStrategy="1" name="UniqueCharString" qualified="false" references="true" similarDeclarations="false" stamp="1691485948178" textual="false" version="1.0"/>
+</session>

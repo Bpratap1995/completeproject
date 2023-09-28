@@ -1,0 +1,21 @@
+package brushup;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class T1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Integer [] arr= {1,2,3,3,4,5};
+  List<Integer> b = Arrays.asList(arr);
+  Set<Integer>s = new HashSet<>(b);
+  for(int a:s) {
+	  System.out.println(a);
+  }
+
+	}
+
+}

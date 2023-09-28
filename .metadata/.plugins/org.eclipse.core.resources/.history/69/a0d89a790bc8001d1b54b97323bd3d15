@@ -1,0 +1,11 @@
+package biocube;
+
+import rahulshetty.ProductCatalogue;
+import testcomponents.BaseTest;
+
+public class ErrorValidation extends BaseTest {
+	
+	ProductCatalogue pc = lp.login("bpratap924@gmail.com", "Biocube@123");
+	
+
+}

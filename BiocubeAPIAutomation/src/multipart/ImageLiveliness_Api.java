@@ -1,0 +1,52 @@
+package multipart;
+
+import static io.restassured.RestAssured.given;
+
+import java.io.File;
+
+import com.datadriven.test.Xls_Reader;
+
+import io.restassured.RestAssured;
+
+public class ImageLiveliness_Api {
+
+	public static void main(String[] args) {
+		// Create Excel sheet where data should store
+		Xls_Reader reader = new Xls_Reader("C:\\Users\\Bhanu Pratap\\Testing.xlsx ");
+
+		int rowNumber = 2;
+		reader.addColumn("Sheet1", "Image");
+		reader.addColumn("Sheet1", "Result");
+
+		// Path of the file
+		File file = new File("C:\\Users\\Bhanu Pratap\\Downloads\\Printedphoto");
+
+		File[] listFiles = file.listFiles();
+
+		for (File f : listFiles) {
+			System.out.println(f);
+
+			RestAssured.baseURI = "http://10.159.237.15";
+			RestAssured.port = 2175;
+			String res = given()
+					.contentType("multipart/form-data")
+					.multiPart("img", f)
+					.post("liveliness/v3.0")
+					.then()
+					.extract()
+					.response()
+					.asString();
+
+			// String result = res.getOutput()+" "+res.getLabel()+" "+res.getPrediction();
+			String result = res;
+
+			reader.setCellData("Sheet1", "Image", rowNumber, f.toString());
+			reader.setCellData("Sheet1", "Result", rowNumber, result);
+			rowNumber++;
+		}
+
+	}
+
+}
+
+
